@@ -4,12 +4,14 @@ body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     overflow-x: hidden;
-
 }
 
 section {
     padding: 2em;
 }
+
+/* Mobile Layout */
+/* Base Style */
 
 nav {
     background-color: yellow;
@@ -41,13 +43,12 @@ nav ul {
 }
 
 .welcome-img {
-    border-radius: 50%;
-    overflow: hidden;
     grid-column: 6/9;
 }
 
 .welcome-img img {
     width: 200%;
+    border-radius: 50%;
 }
 
 #features {
@@ -74,6 +75,7 @@ footer {
     text-align: center;
 }
 
+/* Tablet view */
 @media screen and (min-width: 600px) {
     nav ul {
         align-items: center;
@@ -101,7 +103,26 @@ footer {
         grid-column: 5/9;
         width: 100%;
         height: 50%;
-
     }
+
+    #features ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 2em;
+    }
+    
+    .pricing-levels {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pricing-level {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 920px) {
 
 }
